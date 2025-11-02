@@ -180,6 +180,6 @@ Open to collaborations where **innovation**, **integrity**, and **meaningful imp
 
 <sub>Built with precision. Forged by adversity. Driven by purpose.</sub>
 
-![Visitor Count](https://profile-counter.glitch.me/novusaevum/count.svg)
+![Profile Views](https://komarev.com/ghpvc/?username=novusaevum&label=Profile%20Views&color=667eea&style=for-the-badge)
 
 </div>

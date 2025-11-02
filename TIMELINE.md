@@ -184,14 +184,56 @@ mindmap
 ## 📊 Growth Metrics
 
 ```mermaid
-xychart-beta
-    title "Capability Evolution Over Time"
-    x-axis [2008, 2010, 2012, 2014, 2016, 2018, 2020, 2022, 2024, 2025]
-    y-axis "Mastery Level" 0 --> 100
-    line [10, 30, 45, 60, 70, 75, 80, 60, 85, 95]
-    line [0, 0, 0, 0, 30, 45, 60, 40, 75, 90] "Technical Skills"
-    line [0, 0, 0, 0, 0, 0, 20, 50, 85, 95] "Strategic Thinking"
+graph TD
+    subgraph "2008-2014: Foundation Era"
+        A[School Dropout<br/>Level: 10] --> B[SPM Mastery<br/>Level: 30]
+        B --> C[STPM Excellence<br/>Level: 45]
+        C --> D[USM Dean's List<br/>Level: 60]
+    end
+    
+    subgraph "2015-2020: Execution Era"
+        D --> E[Construction Leadership<br/>Level: 75]
+        E --> F[WMH Resources<br/>Level: 80]
+    end
+    
+    subgraph "2020-2023: Crisis & Pivot"
+        F --> G[E-commerce Scale<br/>Level: 60]
+        G --> H[DOS Attack & Reset<br/>Level: 85]
+    end
+    
+    subgraph "2023-2025: Mastery Era"
+        H --> I[100+ Certifications<br/>Level: 95]
+        I --> J[Strategic Partnerships<br/>Level: 100]
+    end
+    
+    style A fill:#ff6b6b
+    style B fill:#ffa07a
+    style C fill:#ffd700
+    style D fill:#98d8c8
+    style E fill:#4ecdc4
+    style F fill:#6c5ce7
+    style G fill:#a29bfe
+    style H fill:#fd79a8
+    style I fill:#fdcb6e
+    style J fill:#00b894
 ```
+
+### 📈 **Capability Evolution Over Time**
+
+| Year | Overall Mastery | Technical Skills | Strategic Thinking | Business Acumen |
+|------|----------------|------------------|-------------------|------------------|
+| 2008 | 10% | 5% | 0% | 5% |
+| 2010 | 30% | 15% | 5% | 10% |
+| 2012 | 45% | 25% | 10% | 10% |
+| 2014 | 60% | 35% | 15% | 10% |
+| 2016 | 70% | 40% | 20% | 10% |
+| 2018 | 75% | 45% | 20% | 10% |
+| 2020 | 80% | 50% | 20% | 10% |
+| 2022 | 60% | 35% | 15% | 10% |
+| 2024 | 85% | 75% | 85% | 80% |
+| 2025 | 95% | 90% | 95% | 90% |
+
+**Key Insight:** Notice the dip in 2022 (crisis year), followed by **explosive growth** in 2023-2025 through focused learning and strategic partnerships.
 
 ---
 
