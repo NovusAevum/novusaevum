@@ -424,8 +424,24 @@ gantt
 **The Unique Value Proposition:**
 
 ```mermaid
-venn
-    "Technical Depth" AND "Business Acumen" AND "Execution Speed": ["NovusAevum<br/>Sweet Spot"]
+graph TD
+    A[NovusAevum<br/>Sweet Spot] --> B[Technical Depth]
+    A --> C[Business Acumen]
+    A --> D[Execution Speed]
+    
+    B --> E[100+ Certifications]
+    B --> F[5 Domain Mastery]
+    
+    C --> G[Strategic Partnerships]
+    C --> H[Revenue Architecture]
+    
+    D --> I[Ship Daily]
+    D --> J[Real Results]
+    
+    style A fill:#667eea,stroke:#fff,stroke-width:4px,color:#fff
+    style B fill:#43e97b,stroke:#fff,stroke-width:2px
+    style C fill:#f093fb,stroke:#fff,stroke-width:2px
+    style D fill:#4facfe,stroke:#fff,stroke-width:2px
 ```
 
 **Most people have:**

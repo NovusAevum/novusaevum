@@ -354,18 +354,27 @@ Most people need a company to get these. I got them as an individual:
 ### Cross-Domain Applications
 
 ```mermaid
-sankey-beta
-
-AI/ML,Cloud Infrastructure,30
-AI/ML,Marketing Automation,25
-AI/ML,Security Analysis,20
-Cloud Infrastructure,DevOps Pipeline,35
-Cloud Infrastructure,Data Analytics,25
-Cybersecurity,Network Architecture,30
-Cybersecurity,Threat Intelligence,20
-Digital Marketing,Growth Strategy,40
-Digital Marketing,Data Analysis,30
-Business Strategy,Technical Implementation,50
+graph LR
+    A[AI/ML] -->|30 projects| B[Cloud Infrastructure]
+    A -->|25 projects| C[Marketing Automation]
+    A -->|20 projects| D[Security Analysis]
+    
+    B -->|35 projects| E[DevOps Pipeline]
+    B -->|25 projects| F[Data Analytics]
+    
+    G[Cybersecurity] -->|30 projects| H[Network Architecture]
+    G -->|20 projects| I[Threat Intelligence]
+    
+    J[Digital Marketing] -->|40 projects| K[Growth Strategy]
+    J -->|30 projects| L[Data Analysis]
+    
+    M[Business Strategy] -->|50 integrations| N[Technical Implementation]
+    
+    style A fill:#43e97b
+    style B fill:#4facfe
+    style G fill:#ff6b6b
+    style J fill:#f093fb
+    style M fill:#667eea
 ```
 
 ### Real-World Synthesis Examples

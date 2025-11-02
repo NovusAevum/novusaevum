@@ -17,8 +17,8 @@
     }
 
     @keyframes fadeInOut {
-      0%, 100% { opacity: 0; }
-      10%, 90% { opacity: 1; }
+      0%, 100% { opacity: 0; transform: translateY(10px); }
+      15%, 85% { opacity: 1; transform: translateY(0); }
     }
 
     .gradient-stop1 {
@@ -31,15 +31,18 @@
 
     .wisdom-text {
       font-family: 'Courier New', monospace;
-      font-size: 18px;
+      font-size: 20px;
       font-weight: bold;
       fill: #fff;
       text-anchor: middle;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.3);
     }
 
-    .wisdom1 { animation: fadeInOut 24s ease-in-out infinite; animation-delay: 0s; }
-    .wisdom2 { animation: fadeInOut 24s ease-in-out infinite; animation-delay: 8s; opacity: 0; }
-    .wisdom3 { animation: fadeInOut 24s ease-in-out infinite; animation-delay: 16s; opacity: 0; }
+    .wisdom1 { animation: fadeInOut 30s ease-in-out infinite; animation-delay: 0s; }
+    .wisdom2 { animation: fadeInOut 30s ease-in-out infinite; animation-delay: 6s; opacity: 0; }
+    .wisdom3 { animation: fadeInOut 30s ease-in-out infinite; animation-delay: 12s; opacity: 0; }
+    .wisdom4 { animation: fadeInOut 30s ease-in-out infinite; animation-delay: 18s; opacity: 0; }
+    .wisdom5 { animation: fadeInOut 30s ease-in-out infinite; animation-delay: 24s; opacity: 0; }
 
     .ascii-text {
       font-family: 'Courier New', monospace;
@@ -54,6 +57,14 @@
       font-size: 14px;
       fill: rgba(255, 255, 255, 0.9);
       text-anchor: middle;
+    }
+
+    .name-origin {
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+      fill: rgba(255, 255, 255, 0.7);
+      text-anchor: middle;
+      font-style: italic;
     }
 
     .border-glow {
@@ -103,20 +114,26 @@
     ╚═╝  ╚═══╝ ╚═════╝   ╚═══╝   ╚═════╝ ╚══════╝
   </text>
 
-  <!-- Subtitle -->
-  <text class="subtitle" x="50%" y="215">
-    AEVUM — /ˈaɪvəm/ — Latin: Age, Era, Lifetime
+  <!-- Name Origin (Clarified) -->
+  <text class="name-origin" x="50%" y="210">
+    AEVUM /ˈaɪvəm/ — from ancient Latin language, meaning "Age, Era, Lifetime"
   </text>
 
-  <!-- Rotating Wisdom Quotes -->
-  <text class="wisdom-text wisdom1" x="50%" y="270">
-    "I build capital with no currency."
+  <!-- Dynamic Rotating Wisdom Quotes -->
+  <text class="wisdom-text wisdom1" x="50%" y="260">
+    Clarity is my weapon. Precision is my method. Impact is my measure.
   </text>
-  <text class="wisdom-text wisdom2" x="50%" y="270">
-    "I play chess in a world built for poker."
+  <text class="wisdom-text wisdom2" x="50%" y="260">
+    I ask "How do I redefine what's possible?"
   </text>
-  <text class="wisdom-text wisdom3" x="50%" y="270">
-    "Precision is my weapon. Clarity is my mandate."
+  <text class="wisdom-text wisdom3" x="50%" y="260">
+    I build capital with no currency.
+  </text>
+  <text class="wisdom-text wisdom4" x="50%" y="260">
+    I play chess in a world built for poker.
+  </text>
+  <text class="wisdom-text wisdom5" x="50%" y="260">
+    Every scar made my thinking clearer and my actions quieter.
   </text>
 
   <!-- Tagline -->
