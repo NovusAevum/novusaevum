@@ -183,3 +183,18 @@ Open to collaborations where **innovation**, **integrity**, and **meaningful imp
 ![Profile Views](https://komarev.com/ghpvc/?username=novusaevum&label=Profile%20Views&color=667eea&style=for-the-badge)
 
 </div>
+
+
+<div align="center">
+
+### 🔐 Security Notice
+```
+This profile is actively monitored. All interactions are logged.
+Mediocrity is automatically filtered. Excellence is amplified.
+```
+
+**⚡ Powered by:** Discipline × Curiosity × Relentless Execution  
+**🎯 Mission:** Build. Iterate. Impact. Repeat.  
+**💀 Mode:** `ALWAYS_ON`
+
+</div>
