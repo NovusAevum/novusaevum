@@ -1,4 +1,4 @@
-name: Generate Snake Animation
+name: Generate Advanced Snake Animation
 
 on:
   schedule:
@@ -12,27 +12,68 @@ on:
 jobs:
   generate:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     permissions:
       contents: write
-
+    
     steps:
+      # Step 1: Checkout with depth for better git history
       - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Generate snake.svg
-        uses: Platane/snk/svg-only@v3
+        uses: actions/checkout@v4
         with:
-          github_user_name: novusaevum
+          fetch-depth: 0
+      
+      # Step 2: Generate snake animation with error handling
+      - name: Generate snake animation
+        id: snake-generation
+        uses: Platane/snk@v3
+        continue-on-error: false
+        with:
+          github_user_name: NovusAevum
           outputs: |
             dist/snake.svg
             dist/snake-dark.svg?palette=github-dark
             dist/ocean.gif?color_snake=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
-
-      - name: Push snake.svg to output branch
-        uses: crazy-max/ghaction-github-pages@v3
+      
+      # Step 3: Verify generated files exist
+      - name: Verify outputs
+        run: |
+          echo "Checking generated files..."
+          ls -lah dist/
+          if [ ! -f "dist/snake.svg" ]; then
+            echo "Error: snake.svg not generated"
+            exit 1
+          fi
+          echo "All files generated successfully!"
+      
+      # Step 4: Deploy to GitHub Pages with retry logic
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: success()
         with:
-          target_branch: output
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: output
+          force_orphan: true
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+          commit_message: '🐍 Update snake animations [automated]'
+      
+      # Step 5: Create summary for GitHub Actions UI
+      - name: Generate workflow summary
+        if: always()
+        run: |
+          echo "## 🐍 Snake Animation Generation Report" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          if [ -f "dist/snake.svg" ]; then
+            echo "✅ **Status:** Successfully generated" >> $GITHUB_STEP_SUMMARY
+            echo "📊 **Files Created:**" >> $GITHUB_STEP_SUMMARY
+            echo "- snake.svg" >> $GITHUB_STEP_SUMMARY
+            echo "- snake-dark.svg" >> $GITHUB_STEP_SUMMARY
+            echo "- ocean.gif" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "🔗 **View:** [Raw Snake Animation](https://raw.githubusercontent.com/NovusAevum/novusaevum/output/snake.svg)" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "❌ **Status:** Generation failed" >> $GITHUB_STEP_SUMMARY
+            echo "📝 Check logs above for details" >> $GITHUB_STEP_SUMMARY
+          fi

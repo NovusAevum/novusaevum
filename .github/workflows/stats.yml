@@ -1,4 +1,4 @@
-name: Update GitHub Stats
+name: Advanced GitHub Metrics Dashboard
 
 on:
   schedule:
@@ -10,29 +10,154 @@ on:
       - main
 
 jobs:
-  update-stats:
+  update-metrics:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     permissions:
       contents: write
-
+      
     steps:
+      # Step 1: Checkout with full history
       - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Update README with stats
-        uses: anmol098/waka-readme-stats@master
+        uses: actions/checkout@v4
         with:
-          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          SHOW_LINES_OF_CODE: "True"
-          SHOW_PROFILE_VIEWS: "True"
-          SHOW_COMMIT: "True"
-          SHOW_DAYS_OF_WEEK: "True"
-          SHOW_LANGUAGE: "True"
-          SHOW_OS: "True"
-          SHOW_PROJECTS: "True"
-          SHOW_TIMEZONE: "True"
-          SHOW_EDITORS: "True"
-          SHOW_LANGUAGE_PER_REPO: "True"
-          SHOW_SHORT_INFO: "True"
-          SHOW_LOC_CHART: "True"
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      # Step 2: Generate comprehensive GitHub metrics
+      - name: Generate GitHub Metrics
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          user: NovusAevum
+          template: classic
+          base: header, activity, community, repositories, metadata
+          config_timezone: Asia/Kuala_Lumpur
+          config_display: large
+          config_output: svg
+          filename: metrics.svg
+          
+          # Enable advanced features
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
+          
+          plugin_languages: yes
+          plugin_languages_analysis_timeout: 15
+          plugin_languages_categories: markup, programming
+          plugin_languages_colors: github
+          plugin_languages_limit: 8
+          plugin_languages_recent_categories: markup, programming
+          plugin_languages_recent_days: 14
+          plugin_languages_recent_load: 300
+          plugin_languages_sections: most-used
+          plugin_languages_threshold: 0%
+          
+          plugin_lines: yes
+          
+          plugin_topics: yes
+          plugin_topics_limit: 15
+          plugin_topics_mode: starred
+          plugin_topics_sort: stars
+          
+          plugin_habits: yes
+          plugin_habits_charts: yes
+          plugin_habits_days: 14
+          plugin_habits_facts: yes
+          plugin_habits_from: 200
+          
+          plugin_followup: yes
+          plugin_followup_sections: repositories
+          
+          plugin_reactions: yes
+          plugin_reactions_display: absolute
+          plugin_reactions_limit: 200
+          plugin_reactions_limit_discussions: 100
+          plugin_reactions_limit_discussions_comments: 100
+          plugin_reactions_limit_issues: 100
+      
+      # Step 3: Generate detailed language statistics
+      - name: Generate Language Stats
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          user: NovusAevum
+          template: classic
+          base: ""
+          config_timezone: Asia/Kuala_Lumpur
+          filename: language-metrics.svg
+          
+          plugin_languages: yes
+          plugin_languages_indepth: yes
+          plugin_languages_details: bytes-size, percentage
+          plugin_languages_limit: 10
+          plugin_languages_analysis_timeout: 15
+      
+      # Step 4: Generate activity chart
+      - name: Generate Activity Chart
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          user: NovusAevum
+          template: classic
+          base: ""
+          config_timezone: Asia/Kuala_Lumpur
+          filename: activity-metrics.svg
+          
+          plugin_calendar: yes
+          plugin_calendar_limit: 1
+      
+      # Step 5: Commit and push generated metrics
+      - name: Deploy metrics
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Create metrics directory if it doesn't exist
+          mkdir -p metrics
+          
+          # Move generated files
+          if [ -f "metrics.svg" ]; then
+            mv metrics.svg metrics/
+            echo "✓ Main metrics generated"
+          fi
+          
+          if [ -f "language-metrics.svg" ]; then
+            mv language-metrics.svg metrics/
+            echo "✓ Language metrics generated"
+          fi
+          
+          if [ -f "activity-metrics.svg" ]; then
+            mv activity-metrics.svg metrics/
+            echo "✓ Activity metrics generated"
+          fi
+          
+          # Commit if there are changes
+          if [ -n "$(git status --porcelain)" ]; then
+            git add metrics/
+            git commit -m "📊 Update GitHub metrics [automated]"
+            git push
+            echo "✓ Metrics deployed successfully"
+          else
+            echo "ℹ No changes to commit"
+          fi
+      
+      # Step 6: Generate workflow summary
+      - name: Generate summary
+        if: always()
+        run: |
+          echo "## 📊 GitHub Metrics Update Report" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          if [ -f "metrics/metrics.svg" ]; then
+            echo "✅ **Status:** Successfully generated" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "📈 **Metrics Generated:**" >> $GITHUB_STEP_SUMMARY
+            echo "- Comprehensive GitHub metrics" >> $GITHUB_STEP_SUMMARY
+            echo "- Language statistics" >> $GITHUB_STEP_SUMMARY
+            echo "- Activity calendar" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "🔗 **View:** [Metrics Directory](https://github.com/NovusAevum/novusaevum/tree/main/metrics)" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "❌ **Status:** Generation failed" >> $GITHUB_STEP_SUMMARY
+            echo "📝 Check logs above for details" >> $GITHUB_STEP_SUMMARY
+          fi
