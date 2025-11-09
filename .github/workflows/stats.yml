@@ -111,30 +111,29 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          
-          # Create metrics directory if it doesn't exist
-          mkdir -p metrics
-          
-          # Move generated files
+
+          # Check if files were generated
+          CHANGES=0
+
           if [ -f "metrics.svg" ]; then
-            mv metrics.svg metrics/
             echo "✓ Main metrics generated"
+            CHANGES=1
           fi
-          
+
           if [ -f "language-metrics.svg" ]; then
-            mv language-metrics.svg metrics/
             echo "✓ Language metrics generated"
+            CHANGES=1
           fi
-          
+
           if [ -f "activity-metrics.svg" ]; then
-            mv activity-metrics.svg metrics/
             echo "✓ Activity metrics generated"
+            CHANGES=1
           fi
-          
+
           # Commit if there are changes
-          if [ -n "$(git status --porcelain)" ]; then
-            git add metrics/
-            git commit -m "📊 Update GitHub metrics [automated]"
+          if [ $CHANGES -eq 1 ] && [ -n "$(git status --porcelain)" ]; then
+            git add metrics/*.svg
+            git commit -m "Update metrics.svg - [Skip GitHub Action]"
             git push
             echo "✓ Metrics deployed successfully"
           else
@@ -147,16 +146,16 @@ jobs:
         run: |
           echo "## 📊 GitHub Metrics Update Report" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          
-          if [ -f "metrics/metrics.svg" ]; then
+
+          if [ -f "metrics.svg" ]; then
             echo "✅ **Status:** Successfully generated" >> $GITHUB_STEP_SUMMARY
             echo "" >> $GITHUB_STEP_SUMMARY
             echo "📈 **Metrics Generated:**" >> $GITHUB_STEP_SUMMARY
-            echo "- Comprehensive GitHub metrics" >> $GITHUB_STEP_SUMMARY
-            echo "- Language statistics" >> $GITHUB_STEP_SUMMARY
-            echo "- Activity calendar" >> $GITHUB_STEP_SUMMARY
+            echo "- Comprehensive GitHub metrics (metrics.svg)" >> $GITHUB_STEP_SUMMARY
+            echo "- Language statistics (language-metrics.svg)" >> $GITHUB_STEP_SUMMARY
+            echo "- Activity calendar (activity-metrics.svg)" >> $GITHUB_STEP_SUMMARY
             echo "" >> $GITHUB_STEP_SUMMARY
-            echo "🔗 **View:** [Metrics Directory](https://github.com/NovusAevum/novusaevum/tree/main/metrics)" >> $GITHUB_STEP_SUMMARY
+            echo "🔗 **View:** [Main Profile](https://github.com/NovusAevum/novusaevum)" >> $GITHUB_STEP_SUMMARY
           else
             echo "❌ **Status:** Generation failed" >> $GITHUB_STEP_SUMMARY
             echo "📝 Check logs above for details" >> $GITHUB_STEP_SUMMARY

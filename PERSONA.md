@@ -1,12 +1,8 @@
-# 📖 PERSONA: The Transformation
-
 <div align="center">
-
-## Forged by Fire, Defined by Design
-
-*The story of building capital with no currency, playing chess in a world built for poker.*
-
+  <img src="./assets/headers/persona-header.svg" alt="Persona Header - Forged by Fire" width="100%"/>
 </div>
+
+# 📖 PERSONA: The Transformation
 
 ---
 

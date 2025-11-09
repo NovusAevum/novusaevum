@@ -1,0 +1,117 @@
+name: Dynamic Badges Generator
+
+on:
+  schedule:
+    # Update daily at midnight UTC
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-badges:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create badges directory
+        run: mkdir -p assets/badges
+
+      - name: Generate badge data
+        run: |
+          # Create JSON files for custom badges
+
+          # Certifications count badge
+          cat > assets/badges/certifications.json << 'EOF'
+          {
+            "schemaVersion": 1,
+            "label": "Certifications",
+            "message": "100+",
+            "color": "667eea",
+            "style": "for-the-badge"
+          }
+          EOF
+
+          # Domains mastered badge
+          cat > assets/badges/domains.json << 'EOF'
+          {
+            "schemaVersion": 1,
+            "label": "Domains",
+            "message": "5 Pillars",
+            "color": "f093fb",
+            "style": "for-the-badge"
+          }
+          EOF
+
+          # Partnerships badge
+          cat > assets/badges/partnerships.json << 'EOF'
+          {
+            "schemaVersion": 1,
+            "label": "Partnerships",
+            "message": "Google • IBM • AWS",
+            "color": "43e97b",
+            "style": "for-the-badge"
+          }
+          EOF
+
+          # Status badge
+          cat > assets/badges/status.json << 'EOF'
+          {
+            "schemaVersion": 1,
+            "label": "Status",
+            "message": "ALWAYS_ON",
+            "color": "4facfe",
+            "style": "for-the-badge"
+          }
+          EOF
+
+          # Learning velocity badge
+          cat > assets/badges/learning.json << 'EOF'
+          {
+            "schemaVersion": 1,
+            "label": "Learning",
+            "message": "Continuous",
+            "color": "feca57",
+            "style": "for-the-badge"
+          }
+          EOF
+
+          echo "✓ Badge data files created"
+
+      - name: Commit badge data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          if [ -n "$(git status --porcelain)" ]; then
+            git add assets/badges/
+            git commit -m "Update dynamic badge data - [Skip GitHub Action]"
+            git push
+            echo "✓ Badge data committed successfully"
+          else
+            echo "ℹ No changes to commit"
+          fi
+
+      - name: Generate summary
+        if: always()
+        run: |
+          echo "## 🎖️ Dynamic Badges Update Report" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "✅ **Status:** Badge data files generated" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "📊 **Badges Created:**" >> $GITHUB_STEP_SUMMARY
+          echo "- Certifications (100+)" >> $GITHUB_STEP_SUMMARY
+          echo "- Domains (5 Pillars)" >> $GITHUB_STEP_SUMMARY
+          echo "- Partnerships (Google • IBM • AWS)" >> $GITHUB_STEP_SUMMARY
+          echo "- Status (ALWAYS_ON)" >> $GITHUB_STEP_SUMMARY
+          echo "- Learning (Continuous)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "These badges can be used with shields.io endpoint functionality" >> $GITHUB_STEP_SUMMARY

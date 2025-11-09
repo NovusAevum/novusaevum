@@ -2,6 +2,12 @@
   <img src="./assets/header.svg" alt="NovusAevum Header" width="100%"/>
 </div>
 
+<div align="center">
+
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&duration=3000&pause=1000&color=667EEA&center=true&vCenter=true&multiline=true&repeat=true&width=800&height=100&lines=Transdisciplinary+Strategist+%7C+AI+%2B+Security+%2B+Cloud;Building+Capital+With+No+Currency;Playing+Chess+in+a+Poker+World)](https://git.io/typing-svg)
+
+</div>
+
 ---
 
 <div align="center">
@@ -79,15 +85,22 @@ How I play chess in a poker world
 
 <div align="center">
 
-| Domain | Key Certifications | Count | Status |
-|--------|-------------------|-------|--------|
-| 🤖 **AI/ML** | Google Gen AI Leader, IBM AI/ML, AWS ML | 35+ | ✅ Active |
-| 🔐 **Cybersecurity** | CEH v12, TryHackMe CTF, Cisco Security | 20+ | ✅ Active |
-| ☁️ **Cloud** | Google Cloud Professional, AWS Partner, Azure | 25+ | ✅ Active |
-| 📈 **Digital Marketing** | Google DM Professional, HubSpot CRM | 15+ | ✅ Active |
-| 📊 **Business** | IBM Design Thinking, Agile, Project Management | 10+ | ✅ Active |
+| Domain | Key Certifications | Count | Progress |
+|--------|-------------------|-------|----------|
+| 🤖 **AI/ML** | Google Gen AI Leader, IBM AI/ML, AWS ML | 35+ | ![Progress](https://progress-bar.dev/100/?title=Mastered&width=120&color=667eea) |
+| 🔐 **Cybersecurity** | CEH v12, TryHackMe CTF, Cisco Security | 20+ | ![Progress](https://progress-bar.dev/100/?title=Expert&width=120&color=ff6b6b) |
+| ☁️ **Cloud** | Google Cloud Professional, AWS Partner, Azure | 25+ | ![Progress](https://progress-bar.dev/100/?title=Architect&width=120&color=4facfe) |
+| 📈 **Digital Marketing** | Google DM Professional, HubSpot CRM | 15+ | ![Progress](https://progress-bar.dev/100/?title=Pro&width=120&color=f093fb) |
+| 📊 **Business** | IBM Design Thinking, Agile, Project Management | 10+ | ![Progress](https://progress-bar.dev/100/?title=Strategic&width=120&color=43e97b) |
 
 **Total:** 100+ globally recognized certifications | **[View All →](./CERTIFICATIONS.md)**
+
+<br/>
+
+![Certifications](https://img.shields.io/badge/Certifications-100+-667eea?style=for-the-badge&logo=google&logoColor=white)
+![Domains](https://img.shields.io/badge/Domains-5_Pillars-f093fb?style=for-the-badge&logo=target&logoColor=white)
+![Partnerships](https://img.shields.io/badge/Partnerships-Google_•_IBM_•_AWS-43e97b?style=for-the-badge&logo=handshake&logoColor=white)
+![Status](https://img.shields.io/badge/Mode-ALWAYS__ON-4facfe?style=for-the-badge&logo=zap&logoColor=white)
 
 </div>
 
@@ -95,17 +108,40 @@ How I play chess in a poker world
 
 ## 🏗️ What I Build
 
-```ascii
-╔══════════════════════════════════════════════════════════════╗
-║                                                              ║
-║  • AI-Powered Business Intelligence Systems                 ║
-║  • Cybersecurity Infrastructure & Red Team Operations       ║
-║  • Performance Marketing & Growth Engineering               ║
-║  • Strategic Partnerships (Google, IBM, AWS)                ║
-║  • Multi-Domain Problem Solving Frameworks                  ║
-║                                                              ║
-╚══════════════════════════════════════════════════════════════╝
+<div align="center">
+
+```mermaid
+%%{init: {'theme':'dark', 'themeVariables': { 'primaryColor':'#667eea', 'primaryTextColor':'#fff', 'primaryBorderColor':'#667eea', 'lineColor':'#f093fb', 'secondaryColor':'#4facfe', 'tertiaryColor':'#43e97b'}}}%%
+mindmap
+  root((Build))
+    AI Systems
+      RAG Pipelines
+      MLOps
+      Predictive Analytics
+      LLM Integration
+    Security Infrastructure
+      Red Team Ops
+      Network Security
+      OSINT Platforms
+      Threat Intelligence
+    Cloud Architecture
+      Multi-Cloud
+      Serverless
+      Kubernetes
+      IaC
+    Growth Engineering
+      Marketing Automation
+      Performance Optimization
+      AI Powered Campaigns
+      Analytics Platforms
+    Strategic Partnerships
+      Google Partner
+      IBM Collaboration
+      AWS Integration
+      Enterprise Solutions
 ```
+
+</div>
 
 ---
 
