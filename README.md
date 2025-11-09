@@ -214,7 +214,7 @@ I don't operate in silos. I see the throughlines. I take complex systems, decode
 </td>
 <td align="left"><span style="color: #c9d1d9;">Google Gen AI Leader, IBM AI/ML, AWS ML</span></td>
 <td align="center"><span style="color: #667eea; font-weight: 900; font-size: 18px;">35+</span></td>
-<td align="center"><img src="https://progress-bar.dev/100/?title=Mastered&width=120&color=667eea" alt="Progress: 100% Mastered"/></td>
+<td align="center"><img src="https://img.shields.io/badge/Progress-100%25-667eea?style=for-the-badge&logo=target&logoColor=white" alt="Progress: 100% Mastered"/></td>
 </tr>
 <tr>
 <td align="left">
@@ -224,7 +224,7 @@ I don't operate in silos. I see the throughlines. I take complex systems, decode
 </td>
 <td align="left"><span style="color: #c9d1d9;">CEH v12, TryHackMe CTF, Cisco Security</span></td>
 <td align="center"><span style="color: #ff6b6b; font-weight: 900; font-size: 18px;">20+</span></td>
-<td align="center"><img src="https://progress-bar.dev/100/?title=Expert&width=120&color=ff6b6b" alt="Progress: 100% Expert"/></td>
+<td align="center"><img src="https://img.shields.io/badge/Progress-100%25-ff6b6b?style=for-the-badge&logo=target&logoColor=white" alt="Progress: 100% Expert"/></td>
 </tr>
 <tr>
 <td align="left">
@@ -234,7 +234,7 @@ I don't operate in silos. I see the throughlines. I take complex systems, decode
 </td>
 <td align="left"><span style="color: #c9d1d9;">Google Cloud Professional, AWS Partner, Azure</span></td>
 <td align="center"><span style="color: #4facfe; font-weight: 900; font-size: 18px;">25+</span></td>
-<td align="center"><img src="https://progress-bar.dev/100/?title=Architect&width=120&color=4facfe" alt="Progress: 100% Architect"/></td>
+<td align="center"><img src="https://img.shields.io/badge/Progress-100%25-4facfe?style=for-the-badge&logo=target&logoColor=white" alt="Progress: 100% Architect"/></td>
 </tr>
 <tr>
 <td align="left">
@@ -244,7 +244,7 @@ I don't operate in silos. I see the throughlines. I take complex systems, decode
 </td>
 <td align="left"><span style="color: #c9d1d9;">Google DM Professional, HubSpot CRM</span></td>
 <td align="center"><span style="color: #f093fb; font-weight: 900; font-size: 18px;">15+</span></td>
-<td align="center"><img src="https://progress-bar.dev/100/?title=Pro&width=120&color=f093fb" alt="Progress: 100% Pro"/></td>
+<td align="center"><img src="https://img.shields.io/badge/Progress-100%25-f093fb?style=for-the-badge&logo=target&logoColor=white" alt="Progress: 100% Pro"/></td>
 </tr>
 <tr>
 <td align="left">
@@ -254,7 +254,7 @@ I don't operate in silos. I see the throughlines. I take complex systems, decode
 </td>
 <td align="left"><span style="color: #c9d1d9;">IBM Design Thinking, Agile, Project Management</span></td>
 <td align="center"><span style="color: #43e97b; font-weight: 900; font-size: 18px;">10+</span></td>
-<td align="center"><img src="https://progress-bar.dev/100/?title=Strategic&width=120&color=43e97b" alt="Progress: 100% Strategic"/></td>
+<td align="center"><img src="https://img.shields.io/badge/Progress-100%25-43e97b?style=for-the-badge&logo=target&logoColor=white" alt="Progress: 100% Strategic"/></td>
 </tr>
 </table>
 
