@@ -1,4 +1,5 @@
-<svg width="1200" height="400" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Persona Header: Forged by Fire, Refined by Experience">
+  <title>From Adversity to Mastery</title>
   <defs>
     <style>
       @keyframes phoenix-rise {
@@ -23,8 +24,8 @@
       }
 
       @keyframes text-emerge {
-        0% { opacity: 0; letter-spacing: 10px; }
-        100% { opacity: 1; letter-spacing: 2px; }
+        0% { opacity: 0; letter-spacing: 0.5em; }
+        100% { opacity: 1; letter-spacing: 0.15em; }
       }
 
       @keyframes crack-spread {
@@ -60,6 +61,25 @@
         stroke-dashoffset: 1000;
         animation: crack-spread 2s ease-out forwards;
       }
+
+      /* Responsive Typography */
+      @media (max-width: 768px) {
+        .main-title {
+          font-size: clamp(24px, 6vw, 56px);
+        }
+        .subtitle {
+          font-size: clamp(14px, 3vw, 24px);
+        }
+      }
+
+      @media (min-width: 769px) {
+        .main-title {
+          font-size: clamp(40px, 4.67vw, 56px);
+        }
+        .subtitle {
+          font-size: clamp(18px, 2vw, 24px);
+        }
+      }
     </style>
 
     <linearGradient id="fire-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -80,11 +100,11 @@
     </radialGradient>
   </defs>
 
-  <!-- Dark background with subtle gradient -->
-  <rect width="1200" height="400" fill="#0D1117"/>
+  <!-- Dark background -->
+  <rect width="100%" height="100%" fill="#0D1117"/>
 
-  <!-- Crack/shatter effect lines (representing breaking from past) -->
-  <g opacity="0.3">
+  <!-- Crack/shatter lines (breaking through limitations) -->
+  <g opacity="0.3" aria-hidden="true">
     <path class="crack-line" d="M 200,400 L 250,200 L 300,250 L 350,100"
           stroke="#667eea" stroke-width="2" fill="none" style="animation-delay: 0s"/>
     <path class="crack-line" d="M 400,400 L 420,250 L 450,200 L 480,50"
@@ -93,8 +113,8 @@
           stroke="#667eea" stroke-width="2" fill="none" style="animation-delay: 1s"/>
   </g>
 
-  <!-- Rising embers (struggle → rise) -->
-  <g class="ember-particles">
+  <!-- Rising embers (persistence ascending) -->
+  <g class="ember-particles" aria-hidden="true">
     <circle class="ember" cx="300" cy="350" r="3" fill="url(#ember-glow)" style="animation-delay: 0s"/>
     <circle class="ember" cx="450" cy="370" r="2" fill="url(#ember-glow)" style="animation-delay: 1s"/>
     <circle class="ember" cx="600" cy="360" r="4" fill="url(#ember-glow)" style="animation-delay: 0.5s"/>
@@ -102,38 +122,29 @@
     <circle class="ember" cx="900" cy="365" r="3" fill="url(#ember-glow)" style="animation-delay: 0.8s"/>
   </g>
 
-  <!-- Flame base (transformation fire) -->
-  <g transform="translate(600, 300)">
+  <!-- Transformation flame base -->
+  <g transform="translate(600, 300)" aria-hidden="true">
     <ellipse class="flame" cx="0" cy="0" rx="80" ry="40" fill="url(#fire-gradient)" opacity="0.4" style="animation-delay: 0s"/>
     <ellipse class="flame" cx="-40" cy="10" rx="60" ry="30" fill="url(#fire-gradient)" opacity="0.5" style="animation-delay: 0.3s"/>
     <ellipse class="flame" cx="40" cy="10" rx="60" ry="30" fill="url(#fire-gradient)" opacity="0.5" style="animation-delay: 0.6s"/>
   </g>
 
-  <!-- Phoenix bird (simplified, rising from ashes) -->
-  <g class="phoenix-bird glow" transform="translate(600, 220)">
-    <!-- Body -->
+  <!-- Phoenix (symbol of transformation) -->
+  <g class="phoenix-bird glow" transform="translate(600, 220)" aria-label="Phoenix rising from challenges">
     <ellipse cx="0" cy="0" rx="35" ry="50" fill="#667eea"/>
-    <!-- Wings -->
-    <path d="M -35,-10 Q -80,-30 -100,-20 Q -90,-10 -70,10 Q -50,20 -35,15 Z"
-          fill="#f093fb" opacity="0.9"/>
-    <path d="M 35,-10 Q 80,-30 100,-20 Q 90,-10 70,10 Q 50,20 35,15 Z"
-          fill="#f093fb" opacity="0.9"/>
-    <!-- Head -->
+    <path d="M -35,-10 Q -80,-30 -100,-20 Q -90,-10 -70,10 Q -50,20 -35,15 Z" fill="#f093fb" opacity="0.9"/>
+    <path d="M 35,-10 Q 80,-30 100,-20 Q 90,-10 70,10 Q 50,20 35,15 Z" fill="#f093fb" opacity="0.9"/>
     <circle cx="0" cy="-35" r="20" fill="#667eea"/>
-    <!-- Crown/crest -->
-    <path d="M -10,-50 Q 0,-70 10,-50 Q 5,-55 0,-60 Q -5,-55 -10,-50"
-          fill="#feca57"/>
-    <!-- Tail feathers -->
+    <path d="M -10,-50 Q 0,-70 10,-50 Q 5,-55 0,-60 Q -5,-55 -10,-50" fill="#feca57"/>
     <path d="M -20,40 Q -30,80 -25,100 M 0,45 Q 0,85 5,105 M 20,40 Q 30,80 25,100"
           stroke="#f093fb" stroke-width="4" fill="none" opacity="0.8"/>
   </g>
 
-  <!-- Main title text -->
-  <foreignObject x="0" y="80" width="1200" height="150">
-    <div xmlns="http://www.w3.org/1999/xhtml" style="text-align: center;">
-      <h1 class="title-text" style="
-        font-family: 'Arial Black', sans-serif;
-        font-size: 56px;
+  <!-- Title: Philosophical perspective -->
+  <foreignObject x="0" y="80" width="100%" height="150">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="text-align: center; padding: 0 5%;">
+      <h1 class="title-text main-title" style="
+        font-family: 'Arial Black', -apple-system, BlinkMacSystemFont, sans-serif;
         font-weight: 900;
         margin: 0;
         padding: 0;
@@ -141,28 +152,29 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
-        letter-spacing: 2px;
-      ">FORGED BY FIRE</h1>
+        letter-spacing: 0.15em;
+        line-height: 1.2;
+      ">REFINED BY FIRE</h1>
     </div>
   </foreignObject>
 
-  <!-- Subtitle text -->
-  <foreignObject x="0" y="220" width="1200" height="100">
-    <div xmlns="http://www.w3.org/1999/xhtml" style="text-align: center;">
-      <p class="title-text" style="
-        font-family: 'Arial', sans-serif;
-        font-size: 24px;
+  <!-- Subtitle: Third-person philosophical -->
+  <foreignObject x="0" y="220" width="100%" height="100">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="text-align: center; padding: 0 8%;">
+      <p class="title-text subtitle" style="
+        font-family: 'Arial', -apple-system, BlinkMacSystemFont, sans-serif;
         margin: 0;
         padding: 0;
         color: #8b94a5;
         font-style: italic;
-        letter-spacing: 1px;
+        letter-spacing: 0.08em;
         animation-delay: 1.5s;
-      ">From Adversity to Mastery</p>
+        line-height: 1.5;
+      ">When adversity becomes the forge, mastery emerges</p>
     </div>
   </foreignObject>
 
   <!-- Decorative lines -->
-  <line x1="250" y1="190" x2="450" y2="190" stroke="url(#text-gradient)" stroke-width="2" opacity="0.6" class="title-text"/>
-  <line x1="750" y1="190" x2="950" y2="190" stroke="url(#text-gradient)" stroke-width="2" opacity="0.6" class="title-text"/>
+  <line x1="20%" y1="190" x2="37%" y2="190" stroke="url(#text-gradient)" stroke-width="2" opacity="0.6" class="title-text"/>
+  <line x1="63%" y1="190" x2="80%" y2="190" stroke="url(#text-gradient)" stroke-width="2" opacity="0.6" class="title-text"/>
 </svg>

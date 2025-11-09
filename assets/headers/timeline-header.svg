@@ -1,4 +1,5 @@
-<svg width="1200" height="400" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Timeline: A Journey of Continuous Evolution">
+  <title>The Path of Growth and Transformation</title>
   <defs>
     <style>
       @keyframes path-draw {
@@ -63,6 +64,37 @@
       .arrow {
         animation: arrow-move 2s ease-in-out infinite;
       }
+
+      /* Responsive Typography */
+      @media (max-width: 768px) {
+        .main-title {
+          font-size: clamp(28px, 7vw, 52px);
+        }
+        .subtitle {
+          font-size: clamp(12px, 3vw, 20px);
+        }
+        .milestone-year {
+          font-size: clamp(12px, 3vw, 16px);
+        }
+        .milestone-label {
+          font-size: clamp(10px, 2.5vw, 13px);
+        }
+      }
+
+      @media (min-width: 769px) {
+        .main-title {
+          font-size: clamp(40px, 4.3vw, 52px);
+        }
+        .subtitle {
+          font-size: clamp(16px, 1.67vw, 20px);
+        }
+        .milestone-year {
+          font-size: 16px;
+        }
+        .milestone-label {
+          font-size: 13px;
+        }
+      }
     </style>
 
     <linearGradient id="path-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -89,22 +121,21 @@
   </defs>
 
   <!-- Background -->
-  <rect width="1200" height="400" fill="#0D1117"/>
+  <rect width="100%" height="100%" fill="#0D1117"/>
 
-  <!-- Grid pattern for tech feel (subtle) -->
+  <!-- Grid pattern -->
   <defs>
     <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
       <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1a1f2e" stroke-width="1"/>
     </pattern>
   </defs>
-  <rect width="1200" height="400" fill="url(#grid)" opacity="0.3"/>
+  <rect width="100%" height="100%" fill="url(#grid)" opacity="0.3"/>
 
   <!-- Main title -->
-  <foreignObject x="0" y="30" width="1200" height="100">
-    <div xmlns="http://www.w3.org/1999/xhtml" style="text-align: center;">
-      <h1 class="label label-1" style="
-        font-family: 'Arial Black', sans-serif;
-        font-size: 52px;
+  <foreignObject x="0" y="30" width="100%" height="100">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="label label-1" style="text-align: center; padding: 0 5%;">
+      <h1 style="
+        font-family: 'Arial Black', -apple-system, BlinkMacSystemFont, sans-serif;
         font-weight: 900;
         margin: 0;
         padding: 0;
@@ -112,20 +143,20 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
-        letter-spacing: 3px;
-      ">THE JOURNEY</h1>
-      <p class="label label-2" style="
-        font-family: 'Arial', sans-serif;
-        font-size: 20px;
-        margin: 10px 0 0 0;
+        letter-spacing: 0.2em;
+        line-height: 1.2;
+      " class="main-title">THE PATH WALKED</h1>
+      <p style="
+        font-family: 'Arial', -apple-system, BlinkMacSystemFont, sans-serif;
+        margin: 8px 0 0 0;
         color: #8b94a5;
         font-style: italic;
-        letter-spacing: 2px;
-      ">From Adversity to Excellence</p>
+        letter-spacing: 0.12em;
+      " class="subtitle label-2">Where each step reveals new horizons</p>
     </div>
   </foreignObject>
 
-  <!-- Journey path (winding road) -->
+  <!-- Journey path -->
   <path class="journey-path"
         d="M 100,250 Q 200,200 300,250 T 500,250 T 700,250 T 900,250 L 1050,250"
         stroke="url(#path-gradient)"
@@ -133,83 +164,79 @@
         fill="none"
         filter="url(#glow)"/>
 
-  <!-- Milestone markers -->
-  <!-- 2008: Foundation -->
+  <!-- Milestones -->
   <g class="milestone milestone-1" transform="translate(150, 250)">
     <circle class="pulse-ring" cx="0" cy="0" r="12" fill="#ff6b6b" opacity="0.3"/>
     <circle cx="0" cy="0" r="10" fill="#ff6b6b" stroke="#fff" stroke-width="3"/>
-    <text x="0" y="-30" text-anchor="middle" fill="#ff6b6b" font-family="Arial Black" font-size="16" font-weight="bold">2008</text>
-    <text x="0" y="40" text-anchor="middle" fill="#8b94a5" font-family="Arial" font-size="13">Foundation</text>
+    <text x="0" y="-30" text-anchor="middle" fill="#ff6b6b" font-family="Arial Black" font-weight="bold" class="milestone-year">2008</text>
+    <text x="0" y="40" text-anchor="middle" fill="#8b94a5" font-family="Arial" class="milestone-label">Foundation</text>
   </g>
 
-  <!-- 2015: Construction -->
   <g class="milestone milestone-2" transform="translate(350, 250)">
     <circle class="pulse-ring" cx="0" cy="0" r="12" fill="#feca57" opacity="0.3"/>
     <circle cx="0" cy="0" r="10" fill="#feca57" stroke="#fff" stroke-width="3"/>
-    <text x="0" y="-30" text-anchor="middle" fill="#feca57" font-family="Arial Black" font-size="16" font-weight="bold">2015</text>
-    <text x="0" y="40" text-anchor="middle" fill="#8b94a5" font-family="Arial" font-size="13">Leadership</text>
+    <text x="0" y="-30" text-anchor="middle" fill="#feca57" font-family="Arial Black" font-weight="bold" class="milestone-year">2015</text>
+    <text x="0" y="40" text-anchor="middle" fill="#8b94a5" font-family="Arial" class="milestone-label">Leadership</text>
   </g>
 
-  <!-- 2020: Entrepreneurship -->
   <g class="milestone milestone-3" transform="translate(550, 250)">
     <circle class="pulse-ring" cx="0" cy="0" r="12" fill="#4facfe" opacity="0.3"/>
     <circle cx="0" cy="0" r="10" fill="#4facfe" stroke="#fff" stroke-width="3"/>
-    <text x="0" y="-30" text-anchor="middle" fill="#4facfe" font-family="Arial Black" font-size="16" font-weight="bold">2020</text>
-    <text x="0" y="40" text-anchor="middle" fill="#8b94a5" font-family="Arial" font-size="13">E-commerce</text>
+    <text x="0" y="-30" text-anchor="middle" fill="#4facfe" font-family="Arial Black" font-weight="bold" class="milestone-year">2020</text>
+    <text x="0" y="40" text-anchor="middle" fill="#8b94a5" font-family="Arial" class="milestone-label">Venture</text>
   </g>
 
-  <!-- 2023: Pivot -->
   <g class="milestone milestone-4" transform="translate(750, 250)">
     <circle class="pulse-ring" cx="0" cy="0" r="12" fill="#f093fb" opacity="0.3"/>
     <circle cx="0" cy="0" r="10" fill="#f093fb" stroke="#fff" stroke-width="3"/>
-    <text x="0" y="-30" text-anchor="middle" fill="#f093fb" font-family="Arial Black" font-size="16" font-weight="bold">2023</text>
-    <text x="0" y="40" text-anchor="middle" fill="#8b94a5" font-family="Arial" font-size="13">Transformation</text>
+    <text x="0" y="-30" text-anchor="middle" fill="#f093fb" font-family="Arial Black" font-weight="bold" class="milestone-year">2023</text>
+    <text x="0" y="40" text-anchor="middle" fill="#8b94a5" font-family="Arial" class="milestone-label">Pivot</text>
   </g>
 
-  <!-- 2025: Mastery -->
   <g class="milestone milestone-5" transform="translate(950, 250)">
     <circle class="pulse-ring" cx="0" cy="0" r="12" fill="#43e97b" opacity="0.3" style="animation-delay: 3s;"/>
     <circle cx="0" cy="0" r="10" fill="#43e97b" stroke="#fff" stroke-width="3"/>
-    <text x="0" y="-30" text-anchor="middle" fill="#43e97b" font-family="Arial Black" font-size="16" font-weight="bold">2025</text>
-    <text x="0" y="40" text-anchor="middle" fill="#8b94a5" font-family="Arial" font-size="13">Mastery</text>
+    <text x="0" y="-30" text-anchor="middle" fill="#43e97b" font-family="Arial Black" font-weight="bold" class="milestone-year">2025</text>
+    <text x="0" y="40" text-anchor="middle" fill="#8b94a5" font-family="Arial" class="milestone-label">Evolution</text>
   </g>
 
-  <!-- Forward arrow (continuing journey) -->
+  <!-- Forward arrow -->
   <g class="arrow milestone-5">
     <path d="M 1070,250 L 1100,250 L 1090,240 M 1100,250 L 1090,260"
           stroke="#43e97b" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
 
-  <!-- Stats timeline labels -->
-  <foreignObject x="100" y="320" width="1000" height="70">
+  <!-- Stats timeline -->
+  <foreignObject x="8%" y="320" width="84%" height="70">
     <div xmlns="http://www.w3.org/1999/xhtml" class="label label-3" style="
-      display: flex;
-      justify-content: space-between;
-      padding: 0 50px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 10px;
+      padding: 0 20px;
       font-family: 'Courier New', monospace;
-      font-size: 11px;
+      font-size: clamp(9px, 2vw, 11px);
       color: #667eea;
       opacity: 0.7;
     ">
       <div style="text-align: center;">
-        <div style="font-weight: bold; color: #ff6b6b;">DROPOUT</div>
-        <div style="font-size: 9px;">→ Rebuild</div>
+        <div style="font-weight: bold; color: #ff6b6b;">RESTART</div>
+        <div style="font-size: 0.8em;">→ Rebuild</div>
       </div>
       <div style="text-align: center;">
-        <div style="font-weight: bold; color: #feca57;">$MM PROJECTS</div>
-        <div style="font-size: 9px;">→ Execute</div>
+        <div style="font-weight: bold; color: #feca57;">EXECUTE</div>
+        <div style="font-size: 0.8em;">→ $MM Projects</div>
       </div>
       <div style="text-align: center;">
-        <div style="font-weight: bold; color: #4facfe;">3 SHOPS</div>
-        <div style="font-size: 9px;">→ Scale</div>
+        <div style="font-weight: bold; color: #4facfe;">SCALE</div>
+        <div style="font-size: 0.8em;">→ 3 Ventures</div>
       </div>
       <div style="text-align: center;">
-        <div style="font-weight: bold; color: #f093fb;">CRISIS</div>
-        <div style="font-size: 9px;">→ Pivot</div>
+        <div style="font-weight: bold; color: #f093fb;">TRANSFORM</div>
+        <div style="font-size: 0.8em;">→ Crisis to Clarity</div>
       </div>
       <div style="text-align: center;">
-        <div style="font-weight: bold; color: #43e97b;">100+ CERTS</div>
-        <div style="font-size: 9px;">→ Master</div>
+        <div style="font-weight: bold; color: #43e97b;">MASTER</div>
+        <div style="font-size: 0.8em;">→ 100+ Credentials</div>
       </div>
     </div>
   </foreignObject>
