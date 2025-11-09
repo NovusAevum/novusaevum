@@ -82,6 +82,17 @@ describe('Metrics SVG File', () => {
         expect(styleBlock[1]).toMatch(/\{[^}]*\}/);
       }
     });
+
+    test('should include media queries for responsive design in embedded styles', () => {
+      const styleBlock = metricsContent.match(/<style[^>]*>([\s\S]*?)<\/style>/);
+      expect(styleBlock).toBeTruthy();
+      const cssContent = styleBlock ? styleBlock[1] : '';
+      // Check for presence of at least one media query
+      const mediaQueryMatch = cssContent.match(/@media[^{]+\{[\s\S]+?\}/);
+      expect(mediaQueryMatch).toBeTruthy();
+      // Optionally, check that the media query contains valid CSS rules
+      expect(mediaQueryMatch[0]).toMatch(/\{[^}]*\}/);
+    });
   });
 
   describe('GitHub Statistics Integration', () => {
