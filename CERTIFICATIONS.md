@@ -1,8 +1,10 @@
+<div align="center">
+  <img src="./assets/headers/certifications-header.svg" alt="Certifications Header - Achievements Unlocked" width="100%"/>
+</div>
+
 # 🎓 CERTIFICATIONS: 100+ Validated Credentials
 
 <div align="center">
-
-## From Zero to Mastery: The Certification Journey
 
 *Every badge represents hundreds of hours of study, practice, and validation*
 

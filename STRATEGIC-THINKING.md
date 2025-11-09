@@ -1,12 +1,8 @@
-# 🧠 STRATEGIC THINKING: How I Approach Problems
-
 <div align="center">
-
-## From Chaos to Clarity: The Strategic Framework
-
-*"I don't just solve problems. I redesign the game."*
-
+  <img src="./assets/headers/strategic-header.svg" alt="Strategic Header - Playing Chess" width="100%"/>
 </div>
+
+# 🧠 STRATEGIC THINKING: How I Approach Problems
 
 ---
 

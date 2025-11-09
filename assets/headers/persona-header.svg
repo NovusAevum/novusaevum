@@ -1,0 +1,168 @@
+<svg width="1200" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @keyframes phoenix-rise {
+        0% { transform: translateY(80px); opacity: 0; }
+        50% { opacity: 0.5; }
+        100% { transform: translateY(0); opacity: 1; }
+      }
+
+      @keyframes flame-flicker {
+        0%, 100% { opacity: 0.7; transform: scaleY(1); }
+        50% { opacity: 1; transform: scaleY(1.2); }
+      }
+
+      @keyframes ember-rise {
+        0% { transform: translateY(0) scale(1); opacity: 1; }
+        100% { transform: translateY(-100px) scale(0); opacity: 0; }
+      }
+
+      @keyframes glow-pulse {
+        0%, 100% { filter: drop-shadow(0 0 5px #667eea); }
+        50% { filter: drop-shadow(0 0 20px #667eea); }
+      }
+
+      @keyframes text-emerge {
+        0% { opacity: 0; letter-spacing: 10px; }
+        100% { opacity: 1; letter-spacing: 2px; }
+      }
+
+      @keyframes crack-spread {
+        0% { stroke-dashoffset: 1000; }
+        100% { stroke-dashoffset: 0; }
+      }
+
+      .phoenix-bird {
+        animation: phoenix-rise 3s ease-out forwards;
+        transform-origin: center;
+      }
+
+      .flame {
+        animation: flame-flicker 2s ease-in-out infinite;
+      }
+
+      .ember {
+        animation: ember-rise 4s ease-out infinite;
+      }
+
+      .glow {
+        animation: glow-pulse 2s ease-in-out infinite;
+      }
+
+      .title-text {
+        animation: text-emerge 2s ease-out forwards;
+        animation-delay: 1s;
+        opacity: 0;
+      }
+
+      .crack-line {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        animation: crack-spread 2s ease-out forwards;
+      }
+    </style>
+
+    <linearGradient id="fire-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#f093fb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#667eea;stop-opacity:0.8" />
+    </linearGradient>
+
+    <linearGradient id="text-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#f093fb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#667eea;stop-opacity:1" />
+    </linearGradient>
+
+    <radialGradient id="ember-glow">
+      <stop offset="0%" style="stop-color:#feca57;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff6b6b;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Dark background with subtle gradient -->
+  <rect width="1200" height="400" fill="#0D1117"/>
+
+  <!-- Crack/shatter effect lines (representing breaking from past) -->
+  <g opacity="0.3">
+    <path class="crack-line" d="M 200,400 L 250,200 L 300,250 L 350,100"
+          stroke="#667eea" stroke-width="2" fill="none" style="animation-delay: 0s"/>
+    <path class="crack-line" d="M 400,400 L 420,250 L 450,200 L 480,50"
+          stroke="#f093fb" stroke-width="2" fill="none" style="animation-delay: 0.5s"/>
+    <path class="crack-line" d="M 600,400 L 650,220 L 700,280 L 750,120"
+          stroke="#667eea" stroke-width="2" fill="none" style="animation-delay: 1s"/>
+  </g>
+
+  <!-- Rising embers (struggle → rise) -->
+  <g class="ember-particles">
+    <circle class="ember" cx="300" cy="350" r="3" fill="url(#ember-glow)" style="animation-delay: 0s"/>
+    <circle class="ember" cx="450" cy="370" r="2" fill="url(#ember-glow)" style="animation-delay: 1s"/>
+    <circle class="ember" cx="600" cy="360" r="4" fill="url(#ember-glow)" style="animation-delay: 0.5s"/>
+    <circle class="ember" cx="750" cy="355" r="2.5" fill="url(#ember-glow)" style="animation-delay: 1.5s"/>
+    <circle class="ember" cx="900" cy="365" r="3" fill="url(#ember-glow)" style="animation-delay: 0.8s"/>
+  </g>
+
+  <!-- Flame base (transformation fire) -->
+  <g transform="translate(600, 300)">
+    <ellipse class="flame" cx="0" cy="0" rx="80" ry="40" fill="url(#fire-gradient)" opacity="0.4" style="animation-delay: 0s"/>
+    <ellipse class="flame" cx="-40" cy="10" rx="60" ry="30" fill="url(#fire-gradient)" opacity="0.5" style="animation-delay: 0.3s"/>
+    <ellipse class="flame" cx="40" cy="10" rx="60" ry="30" fill="url(#fire-gradient)" opacity="0.5" style="animation-delay: 0.6s"/>
+  </g>
+
+  <!-- Phoenix bird (simplified, rising from ashes) -->
+  <g class="phoenix-bird glow" transform="translate(600, 220)">
+    <!-- Body -->
+    <ellipse cx="0" cy="0" rx="35" ry="50" fill="#667eea"/>
+    <!-- Wings -->
+    <path d="M -35,-10 Q -80,-30 -100,-20 Q -90,-10 -70,10 Q -50,20 -35,15 Z"
+          fill="#f093fb" opacity="0.9"/>
+    <path d="M 35,-10 Q 80,-30 100,-20 Q 90,-10 70,10 Q 50,20 35,15 Z"
+          fill="#f093fb" opacity="0.9"/>
+    <!-- Head -->
+    <circle cx="0" cy="-35" r="20" fill="#667eea"/>
+    <!-- Crown/crest -->
+    <path d="M -10,-50 Q 0,-70 10,-50 Q 5,-55 0,-60 Q -5,-55 -10,-50"
+          fill="#feca57"/>
+    <!-- Tail feathers -->
+    <path d="M -20,40 Q -30,80 -25,100 M 0,45 Q 0,85 5,105 M 20,40 Q 30,80 25,100"
+          stroke="#f093fb" stroke-width="4" fill="none" opacity="0.8"/>
+  </g>
+
+  <!-- Main title text -->
+  <foreignObject x="0" y="80" width="1200" height="150">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="text-align: center;">
+      <h1 class="title-text" style="
+        font-family: 'Arial Black', sans-serif;
+        font-size: 56px;
+        font-weight: 900;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(90deg, #667eea, #f093fb, #667eea);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        letter-spacing: 2px;
+      ">FORGED BY FIRE</h1>
+    </div>
+  </foreignObject>
+
+  <!-- Subtitle text -->
+  <foreignObject x="0" y="220" width="1200" height="100">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="text-align: center;">
+      <p class="title-text" style="
+        font-family: 'Arial', sans-serif;
+        font-size: 24px;
+        margin: 0;
+        padding: 0;
+        color: #8b94a5;
+        font-style: italic;
+        letter-spacing: 1px;
+        animation-delay: 1.5s;
+      ">From Adversity to Mastery</p>
+    </div>
+  </foreignObject>
+
+  <!-- Decorative lines -->
+  <line x1="250" y1="190" x2="450" y2="190" stroke="url(#text-gradient)" stroke-width="2" opacity="0.6" class="title-text"/>
+  <line x1="750" y1="190" x2="950" y2="190" stroke="url(#text-gradient)" stroke-width="2" opacity="0.6" class="title-text"/>
+</svg>

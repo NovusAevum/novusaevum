@@ -1,12 +1,8 @@
-# 🗺️ TIMELINE: The Journey
-
 <div align="center">
-
-## From Adversity to Mastery
-
-*A visual journey through transformation*
-
+  <img src="./assets/headers/timeline-header.svg" alt="Timeline Header - The Journey" width="100%"/>
 </div>
+
+# 🗺️ TIMELINE: The Journey
 
 ---
 

@@ -1,12 +1,8 @@
-# ⚔️ THE ARSENAL: Technical Depth & Mastery
-
 <div align="center">
-
-## Multi-Domain Expertise in Action
-
-*Where theoretical knowledge meets battlefield execution*
-
+  <img src="./assets/headers/technical-header.svg" alt="Technical Header - The Arsenal" width="100%"/>
 </div>
+
+# ⚔️ THE ARSENAL: Technical Depth & Mastery
 
 ---
 
