@@ -193,7 +193,7 @@ I don't operate in silos. I see the throughlines. I take complex systems, decode
 
 <br/>
 
-<div style="display: inline-block; margin: 4px; transition: all 0.3s ease; transform: scale(1);" onmouseover="this.style.transform='scale(1.05)'; this.style.filter='brightness(1.2)';" onmouseout="this.style.transform='scale(1)'; this.style.filter='brightness(1)';">
+<div style="display: inline-block; margin: 4px; transition: all 0.3s ease; transform: scale(1);" class="badge-hover">
 
 ![Certifications](https://img.shields.io/badge/Certifications-100+-667eea?style=for-the-badge&logo=google&logoColor=white)
 
