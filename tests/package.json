@@ -1,0 +1,38 @@
+{
+  "name": "profile-assets-tests",
+  "version": "1.0.0",
+  "description": "Comprehensive test suite for GitHub profile SVG assets and badge generation workflow",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --verbose",
+    "test:svg": "jest svg-validation.test.js --verbose",
+    "test:badges": "jest badge-workflow-validation.test.js --verbose",
+    "test:metrics": "jest metrics-svg-validation.test.js --verbose",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "keywords": [
+    "svg",
+    "validation",
+    "testing",
+    "github",
+    "badges",
+    "accessibility"
+  ],
+  "author": "NovusAevum",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coverageDirectory": "coverage",
+    "collectCoverageFrom": [
+      "**/*.test.js"
+    ],
+    "testMatch": [
+      "**/*.test.js"
+    ],
+    "verbose": true
+  }
+}

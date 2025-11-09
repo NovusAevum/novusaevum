@@ -1,4 +1,5 @@
-<svg width="1200" height="400" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Technical Arsenal: Knowledge Networks Across Domains">
+  <title>Multi-Domain Mastery Through Interconnected Learning</title>
   <defs>
     <style>
       @keyframes node-pulse {
@@ -11,34 +12,16 @@
         100% { stroke-dashoffset: 0; opacity: 0.8; }
       }
 
-      @keyframes particle-flow {
-        0% { offset-distance: 0%; opacity: 0; }
-        10% { opacity: 1; }
-        90% { opacity: 1; }
-        100% { offset-distance: 100%; opacity: 0; }
-      }
-
       @keyframes skill-grow {
         0% { transform: scale(0); opacity: 0; }
         60% { transform: scale(1.1); }
         100% { transform: scale(1); opacity: 1; }
       }
 
-      @keyframes title-glitch {
-        0%, 100% { transform: translate(0, 0); }
-        20% { transform: translate(-2px, 2px); }
-        40% { transform: translate(2px, -2px); }
-        60% { transform: translate(-2px, -2px); }
-        80% { transform: translate(2px, 2px); }
-      }
-
       .node { animation: node-pulse 3s ease-in-out infinite; }
       .connection {
         stroke-dasharray: 1000;
         animation: connection-flow 3s ease-out forwards;
-      }
-      .particle {
-        animation: particle-flow 4s linear infinite;
       }
       .skill-badge {
         animation: skill-grow 0.6s ease-out forwards;
@@ -57,6 +40,37 @@
       .conn-3 { animation-delay: 0.9s; }
       .conn-4 { animation-delay: 1.2s; }
       .conn-5 { animation-delay: 1.5s; }
+
+      /* Responsive Typography */
+      @media (max-width: 768px) {
+        .main-title {
+          font-size: clamp(26px, 6.5vw, 54px);
+        }
+        .subtitle {
+          font-size: clamp(12px, 3vw, 20px);
+        }
+        .skill-label {
+          font-size: clamp(9px, 2.2vw, 11px);
+        }
+        .skill-sub {
+          font-size: clamp(7px, 1.8vw, 9px);
+        }
+      }
+
+      @media (min-width: 769px) {
+        .main-title {
+          font-size: clamp(42px, 4.5vw, 54px);
+        }
+        .subtitle {
+          font-size: clamp(16px, 1.67vw, 20px);
+        }
+        .skill-label {
+          font-size: 11px;
+        }
+        .skill-sub {
+          font-size: 9px;
+        }
+      }
     </style>
 
     <linearGradient id="neural-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -81,26 +95,25 @@
   </defs>
 
   <!-- Background -->
-  <rect width="1200" height="400" fill="#0D1117"/>
+  <rect width="100%" height="100%" fill="#0D1117"/>
 
-  <!-- Circuit board pattern -->
-  <g opacity="0.1">
-    <line x1="0" y1="100" x2="1200" y2="100" stroke="#667eea" stroke-width="1"/>
-    <line x1="0" y1="200" x2="1200" y2="200" stroke="#4facfe" stroke-width="1"/>
-    <line x1="0" y1="300" x2="1200" y2="300" stroke="#43e97b" stroke-width="1"/>
-    <line x1="200" y1="0" x2="200" y2="400" stroke="#667eea" stroke-width="1"/>
-    <line x1="400" y1="0" x2="400" y2="400" stroke="#4facfe" stroke-width="1"/>
-    <line x1="600" y1="0" x2="600" y2="400" stroke="#43e97b" stroke-width="1"/>
-    <line x1="800" y1="0" x2="800" y2="400" stroke="#667eea" stroke-width="1"/>
-    <line x1="1000" y1="0" x2="1000" y2="400" stroke="#4facfe" stroke-width="1"/>
+  <!-- Circuit pattern -->
+  <g opacity="0.1" aria-hidden="true">
+    <line x1="0" y1="100" x2="100%" y2="100" stroke="#667eea" stroke-width="1"/>
+    <line x1="0" y1="200" x2="100%" y2="200" stroke="#4facfe" stroke-width="1"/>
+    <line x1="0" y1="300" x2="100%" y2="300" stroke="#43e97b" stroke-width="1"/>
+    <line x1="16.67%" y1="0" x2="16.67%" y2="100%" stroke="#667eea" stroke-width="1"/>
+    <line x1="33.33%" y1="0" x2="33.33%" y2="100%" stroke="#4facfe" stroke-width="1"/>
+    <line x1="50%" y1="0" x2="50%" y2="100%" stroke="#43e97b" stroke-width="1"/>
+    <line x1="66.67%" y1="0" x2="66.67%" y2="100%" stroke="#667eea" stroke-width="1"/>
+    <line x1="83.33%" y1="0" x2="83.33%" y2="100%" stroke="#4facfe" stroke-width="1"/>
   </g>
 
-  <!-- Main title -->
-  <foreignObject x="0" y="30" width="1200" height="120">
-    <div xmlns="http://www.w3.org/1999/xhtml" style="text-align: center;">
-      <h1 class="skill-badge skill-1" style="
+  <!-- Title -->
+  <foreignObject x="0" y="30" width="100%" height="120">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="skill-badge skill-1" style="text-align: center; padding: 0 5%;">
+      <h1 style="
         font-family: 'Courier New', monospace;
-        font-size: 54px;
         font-weight: 900;
         margin: 0;
         padding: 0;
@@ -108,137 +121,124 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
-        letter-spacing: 4px;
-      ">THE ARSENAL</h1>
-      <p class="skill-badge skill-2" style="
-        font-family: 'Arial', sans-serif;
-        font-size: 20px;
-        margin: 10px 0 0 0;
+        letter-spacing: 0.25em;
+        line-height: 1.2;
+      " class="main-title">KNOWLEDGE SYNTHESIS</h1>
+      <p style="
+        font-family: 'Arial', -apple-system, BlinkMacSystemFont, sans-serif;
+        margin: 8px 0 0 0;
         color: #8b94a5;
-        letter-spacing: 3px;
-      ">MULTI-DOMAIN MASTERY</p>
+        letter-spacing: 0.15em;
+      " class="subtitle skill-badge skill-2">Where domains converge, innovation emerges</p>
     </div>
   </foreignObject>
 
   <!-- Neural network connections -->
-  <g opacity="0.6">
-    <!-- Central hub to skill nodes -->
-    <line class="connection conn-1" x1="600" y1="250" x2="200" y2="220" stroke="url(#neural-gradient)" stroke-width="2"/>
-    <line class="connection conn-2" x1="600" y1="250" x2="350" y2="320" stroke="url(#neural-gradient)" stroke-width="2"/>
-    <line class="connection conn-3" x1="600" y1="250" x2="600" y2="330" stroke="url(#neural-gradient)" stroke-width="2"/>
-    <line class="connection conn-4" x1="600" y1="250" x2="850" y2="320" stroke="url(#neural-gradient)" stroke-width="2"/>
-    <line class="connection conn-5" x1="600" y1="250" x2="1000" y2="220" stroke="url(#neural-gradient)" stroke-width="2"/>
+  <g opacity="0.6" aria-hidden="true">
+    <line class="connection conn-1" x1="50%" y1="250" x2="16.67%" y2="220" stroke="url(#neural-gradient)" stroke-width="2"/>
+    <line class="connection conn-2" x1="50%" y1="250" x2="29.17%" y2="320" stroke="url(#neural-gradient)" stroke-width="2"/>
+    <line class="connection conn-3" x1="50%" y1="250" x2="50%" y2="330" stroke="url(#neural-gradient)" stroke-width="2"/>
+    <line class="connection conn-4" x1="50%" y1="250" x2="70.83%" y2="320" stroke="url(#neural-gradient)" stroke-width="2"/>
+    <line class="connection conn-5" x1="50%" y1="250" x2="83.33%" y2="220" stroke="url(#neural-gradient)" stroke-width="2"/>
   </g>
 
-  <!-- Central core node -->
-  <g transform="translate(600, 250)" class="skill-badge skill-1">
+  <!-- Central core -->
+  <g transform="translate(50%, 250)" class="skill-badge skill-1" aria-label="Core of interconnected knowledge">
     <circle cx="0" cy="0" r="30" fill="url(#node-glow)" filter="url(#blur-glow)"/>
     <circle cx="0" cy="0" r="20" fill="#667eea" stroke="#ffffff" stroke-width="3"/>
     <circle class="node" cx="0" cy="0" r="8" fill="#ffffff" style="animation-delay: 0s;"/>
-    <text x="0" y="55" text-anchor="middle" fill="#667eea" font-family="Courier New" font-size="13" font-weight="bold">CORE</text>
+    <text x="0" y="55" text-anchor="middle" fill="#667eea" font-family="Courier New" font-size="13" font-weight="bold">NEXUS</text>
   </g>
 
-  <!-- Skill domain nodes -->
-  <!-- AI/ML -->
-  <g transform="translate(200, 220)" class="skill-badge skill-2">
+  <!-- Skill nodes -->
+  <g transform="translate(16.67%, 220)" class="skill-badge skill-2">
     <circle cx="0" cy="0" r="20" fill="url(#node-glow)" opacity="0.5"/>
     <circle cx="0" cy="0" r="15" fill="#667eea" stroke="#ffffff" stroke-width="2"/>
     <circle class="node" cx="0" cy="0" r="6" fill="#ffffff" style="animation-delay: 0.5s;"/>
     <foreignObject x="-50" y="25" width="100" height="60">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="text-align: center; font-family: Arial; font-size: 11px; color: #667eea; font-weight: bold;">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="text-align: center; font-family: Arial; color: #667eea; font-weight: bold;" class="skill-label">
         AI/ML<br/>
-        <span style="font-size: 9px; color: #8b94a5; font-weight: normal;">35+ Certs</span>
+        <span style="color: #8b94a5; font-weight: normal;" class="skill-sub">35+ Credentials</span>
       </div>
     </foreignObject>
   </g>
 
-  <!-- Cybersecurity -->
-  <g transform="translate(350, 320)" class="skill-badge skill-3">
+  <g transform="translate(29.17%, 320)" class="skill-badge skill-3">
     <circle cx="0" cy="0" r="20" fill="url(#node-glow)" opacity="0.5"/>
     <circle cx="0" cy="0" r="15" fill="#ff6b6b" stroke="#ffffff" stroke-width="2"/>
     <circle class="node" cx="0" cy="0" r="6" fill="#ffffff" style="animation-delay: 1s;"/>
     <foreignObject x="-55" y="25" width="110" height="60">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="text-align: center; font-family: Arial; font-size: 11px; color: #ff6b6b; font-weight: bold;">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="text-align: center; font-family: Arial; color: #ff6b6b; font-weight: bold;" class="skill-label">
         SECURITY<br/>
-        <span style="font-size: 9px; color: #8b94a5; font-weight: normal;">CEH v12</span>
+        <span style="color: #8b94a5; font-weight: normal;" class="skill-sub">CEH v12</span>
       </div>
     </foreignObject>
   </g>
 
-  <!-- Cloud -->
-  <g transform="translate(600, 330)" class="skill-badge skill-4">
+  <g transform="translate(50%, 330)" class="skill-badge skill-4">
     <circle cx="0" cy="0" r="20" fill="url(#node-glow)" opacity="0.5"/>
     <circle cx="0" cy="0" r="15" fill="#4facfe" stroke="#ffffff" stroke-width="2"/>
     <circle class="node" cx="0" cy="0" r="6" fill="#ffffff" style="animation-delay: 1.5s;"/>
     <foreignObject x="-50" y="25" width="100" height="60">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="text-align: center; font-family: Arial; font-size: 11px; color: #4facfe; font-weight: bold;">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="text-align: center; font-family: Arial; color: #4facfe; font-weight: bold;" class="skill-label">
         CLOUD<br/>
-        <span style="font-size: 9px; color: #8b94a5; font-weight: normal;">Multi-Cloud</span>
+        <span style="color: #8b94a5; font-weight: normal;" class="skill-sub">Multi-Cloud</span>
       </div>
     </foreignObject>
   </g>
 
-  <!-- Marketing -->
-  <g transform="translate(850, 320)" class="skill-badge skill-3">
+  <g transform="translate(70.83%, 320)" class="skill-badge skill-3">
     <circle cx="0" cy="0" r="20" fill="url(#node-glow)" opacity="0.5"/>
     <circle cx="0" cy="0" r="15" fill="#f093fb" stroke="#ffffff" stroke-width="2"/>
     <circle class="node" cx="0" cy="0" r="6" fill="#ffffff" style="animation-delay: 2s;"/>
     <foreignObject x="-55" y="25" width="110" height="60">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="text-align: center; font-family: Arial; font-size: 11px; color: #f093fb; font-weight: bold;">
-        MARKETING<br/>
-        <span style="font-size: 9px; color: #8b94a5; font-weight: normal;">Growth Eng</span>
+      <div xmlns="http://www.w3.org/1999/xhtml" style="text-align: center; font-family: Arial; color: #f093fb; font-weight: bold;" class="skill-label">
+        GROWTH<br/>
+        <span style="color: #8b94a5; font-weight: normal;" class="skill-sub">AI + Marketing</span>
       </div>
     </foreignObject>
   </g>
 
-  <!-- Strategy -->
-  <g transform="translate(1000, 220)" class="skill-badge skill-5">
+  <g transform="translate(83.33%, 220)" class="skill-badge skill-5">
     <circle cx="0" cy="0" r="20" fill="url(#node-glow)" opacity="0.5"/>
     <circle cx="0" cy="0" r="15" fill="#43e97b" stroke="#ffffff" stroke-width="2"/>
     <circle class="node" cx="0" cy="0" r="6" fill="#ffffff" style="animation-delay: 2.5s;"/>
     <foreignObject x="-50" y="25" width="100" height="60">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="text-align: center; font-family: Arial; font-size: 11px; color: #43e97b; font-weight: bold;">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="text-align: center; font-family: Arial; color: #43e97b; font-weight: bold;" class="skill-label">
         STRATEGY<br/>
-        <span style="font-size: 9px; color: #8b94a5; font-weight: normal;">Partnerships</span>
+        <span style="color: #8b94a5; font-weight: normal;" class="skill-sub">Partnerships</span>
       </div>
     </foreignObject>
   </g>
 
-  <!-- Flowing particles on connections -->
-  <g class="skill-badge skill-3">
+  <!-- Flowing particles -->
+  <g class="skill-badge skill-3" aria-hidden="true">
     <circle r="4" fill="#667eea" opacity="0.8">
       <animateMotion dur="4s" repeatCount="indefinite" path="M 600,250 L 200,220"/>
     </circle>
-  </g>
-  <g class="skill-badge skill-3">
     <circle r="4" fill="#ff6b6b" opacity="0.8">
       <animateMotion dur="3.5s" repeatCount="indefinite" begin="0.5s" path="M 600,250 L 350,320"/>
     </circle>
-  </g>
-  <g class="skill-badge skill-4">
     <circle r="4" fill="#4facfe" opacity="0.8">
       <animateMotion dur="3s" repeatCount="indefinite" begin="1s" path="M 600,250 L 600,330"/>
     </circle>
-  </g>
-  <g class="skill-badge skill-4">
     <circle r="4" fill="#f093fb" opacity="0.8">
       <animateMotion dur="3.5s" repeatCount="indefinite" begin="1.5s" path="M 600,250 L 850,320"/>
     </circle>
-  </g>
-  <g class="skill-badge skill-5">
     <circle r="4" fill="#43e97b" opacity="0.8">
       <animateMotion dur="4s" repeatCount="indefinite" begin="2s" path="M 600,250 L 1000,220"/>
     </circle>
   </g>
 
-  <!-- Bottom tech stats bar -->
-  <foreignObject x="250" y="180" width="700" height="40">
+  <!-- Stats bar -->
+  <foreignObject x="20.83%" y="180" width="58.33%" height="40">
     <div xmlns="http://www.w3.org/1999/xhtml" class="skill-badge skill-3" style="
-      display: flex;
-      justify-content: space-around;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+      gap: 8px;
       padding: 8px;
       font-family: 'Courier New', monospace;
-      font-size: 10px;
+      font-size: clamp(8px, 2vw, 10px);
       color: #667eea;
       background: rgba(102, 126, 234, 0.1);
       border: 1px solid rgba(102, 126, 234, 0.3);
@@ -246,19 +246,19 @@
     ">
       <div style="text-align: center;">
         <div style="font-weight: bold; color: #43e97b;">100+</div>
-        <div style="font-size: 8px;">CERTIFICATIONS</div>
+        <div style="font-size: 0.8em;">CERTIFIED</div>
       </div>
       <div style="text-align: center;">
         <div style="font-weight: bold; color: #4facfe;">5</div>
-        <div style="font-size: 8px;">DOMAINS</div>
+        <div style="font-size: 0.8em;">DOMAINS</div>
       </div>
       <div style="text-align: center;">
         <div style="font-weight: bold; color: #f093fb;">3</div>
-        <div style="font-size: 8px;">PARTNERSHIPS</div>
+        <div style="font-size: 0.8em;">PARTNERS</div>
       </div>
       <div style="text-align: center;">
         <div style="font-weight: bold; color: #feca57;">∞</div>
-        <div style="font-size: 8px;">LEARNING</div>
+        <div style="font-size: 0.8em;">EVOLVING</div>
       </div>
     </div>
   </foreignObject>
