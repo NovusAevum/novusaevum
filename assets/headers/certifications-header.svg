@@ -134,22 +134,22 @@
 
   <!-- Radial burst -->
   <g opacity="0.05" aria-hidden="true">
-    <line x1="50%" y1="200" x2="16.67%" y2="50" stroke="#feca57" stroke-width="2"/>
-    <line x1="50%" y1="200" x2="33.33%" y2="50" stroke="#f093fb" stroke-width="2"/>
-    <line x1="50%" y1="200" x2="50%" y2="50" stroke="#667eea" stroke-width="2"/>
-    <line x1="50%" y1="200" x2="66.67%" y2="50" stroke="#4facfe" stroke-width="2"/>
-    <line x1="50%" y1="200" x2="83.33%" y2="50" stroke="#43e97b" stroke-width="2"/>
+    <line x1="600" y1="200" x2="200" y2="50" stroke="#feca57" stroke-width="2"/>
+    <line x1="600" y1="200" x2="400" y2="50" stroke="#f093fb" stroke-width="2"/>
+    <line x1="600" y1="200" x2="600" y2="50" stroke="#667eea" stroke-width="2"/>
+    <line x1="600" y1="200" x2="800" y2="50" stroke="#4facfe" stroke-width="2"/>
+    <line x1="600" y1="200" x2="1000" y2="50" stroke="#43e97b" stroke-width="2"/>
 
-    <line x1="50%" y1="200" x2="16.67%" y2="350" stroke="#feca57" stroke-width="2"/>
-    <line x1="50%" y1="200" x2="33.33%" y2="350" stroke="#f093fb" stroke-width="2"/>
-    <line x1="50%" y1="200" x2="66.67%" y2="350" stroke="#4facfe" stroke-width="2"/>
-    <line x1="50%" y1="200" x2="83.33%" y2="350" stroke="#43e97b" stroke-width="2"/>
+    <line x1="600" y1="200" x2="200" y2="350" stroke="#feca57" stroke-width="2"/>
+    <line x1="600" y1="200" x2="400" y2="350" stroke="#f093fb" stroke-width="2"/>
+    <line x1="600" y1="200" x2="800" y2="350" stroke="#4facfe" stroke-width="2"/>
+    <line x1="600" y1="200" x2="1000" y2="350" stroke="#43e97b" stroke-width="2"/>
   </g>
 
   <!-- Title ribbon -->
   <g class="ribbon">
-    <rect x="25%" y="50" width="50%" height="80" fill="url(#title-gradient)" opacity="0.15" rx="10"/>
-    <rect x="25%" y="50" width="50%" height="80" fill="none" stroke="url(#title-gradient)" stroke-width="2" rx="10"/>
+    <rect x="300" y="50" width="600" height="80" fill="url(#title-gradient)" opacity="0.15" rx="10"/>
+    <rect x="300" y="50" width="600" height="80" fill="none" stroke="url(#title-gradient)" stroke-width="2" rx="10"/>
   </g>
 
   <!-- Title -->
@@ -179,7 +179,7 @@
   </foreignObject>
 
   <!-- Badges (5 domain icons) -->
-  <g class="badge badge-1" transform="translate(10%, 210)">
+  <g class="badge badge-1" transform="translate(120, 210)">
     <use href="#achievement-badge" width="100" height="120" filter="url(#badge-glow)"/>
     <foreignObject x="-33.33" y="125" width="166.67" height="50">
       <div xmlns="http://www.w3.org/1999/xhtml" style="text-align: center; font-family: Arial; color: #feca57; font-weight: bold;" class="badge-label">
@@ -189,7 +189,7 @@
     </foreignObject>
   </g>
 
-  <g class="badge badge-2" transform="translate(26.67%, 210)">
+  <g class="badge badge-2" transform="translate(320, 210)">
     <use href="#achievement-badge" width="90" height="110" filter="url(#badge-glow)"/>
     <defs>
       <linearGradient id="red-badge">
@@ -207,7 +207,7 @@
     </foreignObject>
   </g>
 
-  <g class="badge badge-3" transform="translate(43.33%, 200)">
+  <g class="badge badge-3" transform="translate(520, 200)">
     <use href="#achievement-badge" width="110" height="130" filter="url(#badge-glow)"/>
     <foreignObject x="-41.67" y="135" width="183.33" height="50">
       <div xmlns="http://www.w3.org/1999/xhtml" style="text-align: center; font-family: Arial; color: #4facfe; font-weight: bold;" class="badge-label">
@@ -217,7 +217,7 @@
     </foreignObject>
   </g>
 
-  <g class="badge badge-4" transform="translate(60%, 210)">
+  <g class="badge badge-4" transform="translate(720, 210)">
     <use href="#achievement-badge" width="90" height="110" filter="url(#badge-glow)"/>
     <defs>
       <linearGradient id="purple-badge">
@@ -235,7 +235,7 @@
     </foreignObject>
   </g>
 
-  <g class="badge badge-5" transform="translate(76.67%, 210)">
+  <g class="badge badge-5" transform="translate(920, 210)">
     <use href="#achievement-badge" width="100" height="120" filter="url(#badge-glow)"/>
     <defs>
       <linearGradient id="green-badge">
@@ -255,23 +255,23 @@
 
   <!-- Twinkling stars -->
   <g class="star star-1" aria-hidden="true">
-    <path d="M 20.83%,150 L 21.08%,157 L 21.75%,158 L 21.33%,163 L 21.42%,171 L 20.83%,167 L 20.25%,171 L 20.33%,163 L 19.92%,158 L 20.58%,157 Z" fill="#feca57"/>
+    <path d="M 250,150 L 253,157 L 261,158 L 256,163 L 257,171 L 250,167 L 243,171 L 244,163 L 239,158 L 247,157 Z" fill="#feca57"/>
   </g>
   <g class="star star-2" aria-hidden="true">
-    <path d="M 37.5%,130 L 37.75%,137 L 38.42%,138 L 38%,143 L 38.08%,151 L 37.5%,147 L 36.92%,151 L 37%,143 L 36.58%,138 L 37.25%,137 Z" fill="#f093fb"/>
+    <path d="M 450,130 L 453,137 L 461,138 L 456,143 L 457,151 L 450,147 L 443,151 L 444,143 L 439,138 L 447,137 Z" fill="#f093fb"/>
   </g>
   <g class="star star-3" aria-hidden="true">
-    <path d="M 54.17%,120 L 54.42%,127 L 55.08%,128 L 54.67%,133 L 54.75%,141 L 54.17%,137 L 53.58%,141 L 53.67%,133 L 53.25%,128 L 53.92%,127 Z" fill="#667eea"/>
+    <path d="M 650,120 L 653,127 L 661,128 L 656,133 L 657,141 L 650,137 L 643,141 L 644,133 L 639,128 L 647,127 Z" fill="#667eea"/>
   </g>
   <g class="star star-4" aria-hidden="true">
-    <path d="M 70.83%,130 L 71.08%,137 L 71.75%,138 L 71.33%,143 L 71.42%,151 L 70.83%,147 L 70.25%,151 L 70.33%,143 L 69.92%,138 L 70.58%,137 Z" fill="#4facfe"/>
+    <path d="M 850,130 L 853,137 L 861,138 L 856,143 L 857,151 L 850,147 L 843,151 L 844,143 L 839,138 L 847,137 Z" fill="#4facfe"/>
   </g>
   <g class="star star-5" aria-hidden="true">
-    <path d="M 87.5%,150 L 87.75%,157 L 88.42%,158 L 88%,163 L 88.08%,171 L 87.5%,167 L 86.92%,171 L 87%,163 L 86.58%,158 L 87.25%,157 Z" fill="#43e97b"/>
+    <path d="M 1050,150 L 1053,157 L 1061,158 L 1056,163 L 1057,171 L 1050,167 L 1043,171 L 1044,163 L 1039,158 L 1047,157 Z" fill="#43e97b"/>
   </g>
 
   <!-- Counter -->
-  <foreignObject x="33.33%" y="150" width="33.33%" height="60">
+  <foreignObject x="400" y="150" width="400" height="60">
     <div xmlns="http://www.w3.org/1999/xhtml" class="counter" style="
       text-align: center;
       font-family: 'Impact', sans-serif;
@@ -290,7 +290,7 @@
 
   <!-- Shine -->
   <g class="shine" opacity="0.3" aria-hidden="true">
-    <rect x="0" y="0" width="16.67%" height="100%" fill="url(#shine-gradient)"/>
+    <rect x="0" y="0" width="200" height="100%" fill="url(#shine-gradient)"/>
   </g>
   <defs>
     <linearGradient id="shine-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
