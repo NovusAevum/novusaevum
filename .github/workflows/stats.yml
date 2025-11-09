@@ -132,7 +132,7 @@ jobs:
 
           # Commit if there are changes
           if [ $CHANGES -eq 1 ] && [ -n "$(git status --porcelain)" ]; then
-            git add *.svg
+            git add metrics/*.svg
             git commit -m "Update metrics.svg - [Skip GitHub Action]"
             git push
             echo "✓ Metrics deployed successfully"
