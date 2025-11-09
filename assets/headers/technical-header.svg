@@ -99,14 +99,14 @@
 
   <!-- Circuit pattern -->
   <g opacity="0.1" aria-hidden="true">
-    <line x1="0" y1="100" x2="100%" y2="100" stroke="#667eea" stroke-width="1"/>
-    <line x1="0" y1="200" x2="100%" y2="200" stroke="#4facfe" stroke-width="1"/>
-    <line x1="0" y1="300" x2="100%" y2="300" stroke="#43e97b" stroke-width="1"/>
-    <line x1="16.67%" y1="0" x2="16.67%" y2="100%" stroke="#667eea" stroke-width="1"/>
-    <line x1="33.33%" y1="0" x2="33.33%" y2="100%" stroke="#4facfe" stroke-width="1"/>
-    <line x1="50%" y1="0" x2="50%" y2="100%" stroke="#43e97b" stroke-width="1"/>
-    <line x1="66.67%" y1="0" x2="66.67%" y2="100%" stroke="#667eea" stroke-width="1"/>
-    <line x1="83.33%" y1="0" x2="83.33%" y2="100%" stroke="#4facfe" stroke-width="1"/>
+    <line x1="0" y1="100" x2="1200" y2="100" stroke="#667eea" stroke-width="1"/>
+    <line x1="0" y1="200" x2="1200" y2="200" stroke="#4facfe" stroke-width="1"/>
+    <line x1="0" y1="300" x2="1200" y2="300" stroke="#43e97b" stroke-width="1"/>
+    <line x1="200" y1="0" x2="200" y2="400" stroke="#667eea" stroke-width="1"/>
+    <line x1="400" y1="0" x2="400" y2="400" stroke="#4facfe" stroke-width="1"/>
+    <line x1="600" y1="0" x2="600" y2="400" stroke="#43e97b" stroke-width="1"/>
+    <line x1="800" y1="0" x2="800" y2="400" stroke="#667eea" stroke-width="1"/>
+    <line x1="1000" y1="0" x2="1000" y2="400" stroke="#4facfe" stroke-width="1"/>
   </g>
 
   <!-- Title -->
@@ -135,15 +135,15 @@
 
   <!-- Neural network connections -->
   <g opacity="0.6" aria-hidden="true">
-    <line class="connection conn-1" x1="50%" y1="250" x2="16.67%" y2="220" stroke="url(#neural-gradient)" stroke-width="2"/>
-    <line class="connection conn-2" x1="50%" y1="250" x2="29.17%" y2="320" stroke="url(#neural-gradient)" stroke-width="2"/>
-    <line class="connection conn-3" x1="50%" y1="250" x2="50%" y2="330" stroke="url(#neural-gradient)" stroke-width="2"/>
-    <line class="connection conn-4" x1="50%" y1="250" x2="70.83%" y2="320" stroke="url(#neural-gradient)" stroke-width="2"/>
-    <line class="connection conn-5" x1="50%" y1="250" x2="83.33%" y2="220" stroke="url(#neural-gradient)" stroke-width="2"/>
+    <line class="connection conn-1" x1="600" y1="250" x2="200" y2="220" stroke="url(#neural-gradient)" stroke-width="2"/>
+    <line class="connection conn-2" x1="600" y1="250" x2="350" y2="320" stroke="url(#neural-gradient)" stroke-width="2"/>
+    <line class="connection conn-3" x1="600" y1="250" x2="600" y2="330" stroke="url(#neural-gradient)" stroke-width="2"/>
+    <line class="connection conn-4" x1="600" y1="250" x2="850" y2="320" stroke="url(#neural-gradient)" stroke-width="2"/>
+    <line class="connection conn-5" x1="600" y1="250" x2="1000" y2="220" stroke="url(#neural-gradient)" stroke-width="2"/>
   </g>
 
   <!-- Central core -->
-  <g transform="translate(50%, 250)" class="skill-badge skill-1" aria-label="Core of interconnected knowledge">
+  <g transform="translate(600, 250)" class="skill-badge skill-1" aria-label="Core of interconnected knowledge">
     <circle cx="0" cy="0" r="30" fill="url(#node-glow)" filter="url(#blur-glow)"/>
     <circle cx="0" cy="0" r="20" fill="#667eea" stroke="#ffffff" stroke-width="3"/>
     <circle class="node" cx="0" cy="0" r="8" fill="#ffffff" style="animation-delay: 0s;"/>
@@ -151,7 +151,7 @@
   </g>
 
   <!-- Skill nodes -->
-  <g transform="translate(16.67%, 220)" class="skill-badge skill-2">
+  <g transform="translate(200, 220)" class="skill-badge skill-2">
     <circle cx="0" cy="0" r="20" fill="url(#node-glow)" opacity="0.5"/>
     <circle cx="0" cy="0" r="15" fill="#667eea" stroke="#ffffff" stroke-width="2"/>
     <circle class="node" cx="0" cy="0" r="6" fill="#ffffff" style="animation-delay: 0.5s;"/>
@@ -163,7 +163,7 @@
     </foreignObject>
   </g>
 
-  <g transform="translate(29.17%, 320)" class="skill-badge skill-3">
+  <g transform="translate(350, 320)" class="skill-badge skill-3">
     <circle cx="0" cy="0" r="20" fill="url(#node-glow)" opacity="0.5"/>
     <circle cx="0" cy="0" r="15" fill="#ff6b6b" stroke="#ffffff" stroke-width="2"/>
     <circle class="node" cx="0" cy="0" r="6" fill="#ffffff" style="animation-delay: 1s;"/>
@@ -175,7 +175,7 @@
     </foreignObject>
   </g>
 
-  <g transform="translate(50%, 330)" class="skill-badge skill-4">
+  <g transform="translate(600, 330)" class="skill-badge skill-4">
     <circle cx="0" cy="0" r="20" fill="url(#node-glow)" opacity="0.5"/>
     <circle cx="0" cy="0" r="15" fill="#4facfe" stroke="#ffffff" stroke-width="2"/>
     <circle class="node" cx="0" cy="0" r="6" fill="#ffffff" style="animation-delay: 1.5s;"/>
@@ -187,7 +187,7 @@
     </foreignObject>
   </g>
 
-  <g transform="translate(70.83%, 320)" class="skill-badge skill-3">
+  <g transform="translate(850, 320)" class="skill-badge skill-3">
     <circle cx="0" cy="0" r="20" fill="url(#node-glow)" opacity="0.5"/>
     <circle cx="0" cy="0" r="15" fill="#f093fb" stroke="#ffffff" stroke-width="2"/>
     <circle class="node" cx="0" cy="0" r="6" fill="#ffffff" style="animation-delay: 2s;"/>
@@ -199,7 +199,7 @@
     </foreignObject>
   </g>
 
-  <g transform="translate(83.33%, 220)" class="skill-badge skill-5">
+  <g transform="translate(1000, 220)" class="skill-badge skill-5">
     <circle cx="0" cy="0" r="20" fill="url(#node-glow)" opacity="0.5"/>
     <circle cx="0" cy="0" r="15" fill="#43e97b" stroke="#ffffff" stroke-width="2"/>
     <circle class="node" cx="0" cy="0" r="6" fill="#ffffff" style="animation-delay: 2.5s;"/>
@@ -231,7 +231,7 @@
   </g>
 
   <!-- Stats bar -->
-  <foreignObject x="20.83%" y="180" width="58.33%" height="40">
+  <foreignObject x="250" y="180" width="700" height="40">
     <div xmlns="http://www.w3.org/1999/xhtml" class="skill-badge skill-3" style="
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
